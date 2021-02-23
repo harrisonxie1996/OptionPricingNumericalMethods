@@ -46,29 +46,6 @@ class lookback_option:
                         vTree[i][j] = max(self.lattice[i][j]-1, 1/self.R*((1-self.p)*vTree[i+1][j+1]*self.d +self.p*vTree[i+1][j]*self.u))
         return vTree
 
-
-        # def max_prices(t, S):
-        #     '''
-        #     This function is used to find a maximum prices in a price list over time interval [0,t]
-        #     :param t: t is the ending time, included
-        #     :param S: the price path
-        #     :return: maximum prices from time 0 to time t
-        #     '''
-        #     Smax = np.zeros(t)
-        #     Smax[0] = S[0]
-        #     for i in range(1,t+1):
-        #         Smax[i] = max(Smax[i-1], S[i])
-        #     return Smax
-
-        # # construct Cheuk Vorst tree
-        # Y = np.zeros((self.N+1, self.N+1))
-        # Y[:, 0] = 1.0000
-        # for i in range(1,self.N):
-        #     for j in range(i+1):
-        #         Y[i][j] = max_prices(i, self.lattice[:i, j])/self.lattice[i][j]
-
-
-
 S0 = 50
 K = 50
 rf = 0.1
